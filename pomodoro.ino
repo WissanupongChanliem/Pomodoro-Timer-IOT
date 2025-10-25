@@ -255,5 +255,3 @@ void print_timer()
     lcd.print(60 - second);
     return;
 }
-
-// If this comment show in website, it work!
