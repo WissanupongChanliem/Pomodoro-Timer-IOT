@@ -1,14 +1,15 @@
 # Physical Computing Project 2025 - IT KMITL
-**This repository is part of Physical Computing course @ School of Information Technology, KMITL**
 
 <p align="center">
   <img width=1000 height=auto src="picture/backdrop.png">
 </p>
 
-# Pomodoro Timer
-Pomodoro Timer
+# Pomodoro Timer IoT 🍅
+> Smart Pomodoro Timer System using IoT for Productivity Enhancement
 
-## 💻 Languages & Framework
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptatum. In aliquid reprehenderit praesentium quidem ut similique nostrum voluptatem esse placeat ipsam optio aperiam ex itaque, quae pariatur eveniet suscipit.
+
+## 🚀 Languages & Framework
 <img src="https://skillicons.dev/icons?i=arduino,html,bootstrap"/>
 
 ## 🧑‍💻 Contributors
