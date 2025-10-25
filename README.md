@@ -1,7 +1,7 @@
 # Physical Computing Project 2025 - IT KMITL
 **This repository is part of Physical Computing course @ School of Information Technology, KMITL**
 
-## 📓 Pomodoro Timer
+# 📓 Pomodoro Timer
 Pomodoro Timer
 
 ## 💻 Languages & Tools

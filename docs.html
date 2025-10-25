@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Pomodoro Timer IoT</title>
 </head>
-<body class="font-monospace">
+<body class="font-monospace" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Pomodoro Timer IoT</a>
@@ -32,13 +32,16 @@
             </div>
         </div>
     </nav>
-    <div id="section1" class="container p-5 pb-0">
+    <div id="section1" class="container p-5">
         <h1>What About?</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, suscipit. Tempore quis unde saepe voluptatibus ut soluta alias? Consequuntur, adipisci! Exercitationem fugiat explicabo nostrum quaerat facere debitis dicta? Eligendi, iusto!</p>
+        <hr>
+        <h3>What make this project special?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit porro a non voluptates dolores deserunt? Necessitatibus quibusdam, voluptatibus unde perferendis totam labore. Facere, deserunt vel. Voluptatem dicta nihil dolorum laboriosam.</p>
     </div>
-    <div id="section2" class="container p-5 pb-0">
+    <div id="section2" class="container p-5">
         <h1>Source Code</h1>
-        <pre class="overflow-x-scroll overflow-y-scroll" style="max-height: 700px; border: 2px solid #f5f5f5;">
+        <pre class="overflow-x-scroll overflow-y-scroll" style="max-height: 700px; border: 1px solid #D2D2D2; border-radius: 5px;">
             <code>
     #include <LiquidCrystal_I2C.h>
 
@@ -292,59 +295,63 @@
             <iframe src="https://www.youtube.com/embed/h-vRZK-d9gM" allowfullscreen></iframe>
         </div>
     </div>
-    <div id="section4" class="row" style="min-height: 100vh; display: flex; align-items: center; background-color: rgb(33, 37, 41);">
-        <div class="container mt-5 bg-dark">
-            <h1 class="text-center mb-4 text-white" id="member">Our Team</h1>
-        <div class="row" style="margin: 40px;">
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <a href="https://github.com/CyanKagami" target="_blank">
-                        <img src="picture/pupe.png" class="card-img-top" alt="Member 1">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">บุญสิตา จงกลม</h5>
-                        <p class="card-text">67070094</p>
+    <div id="section4" class="container p-5">
+        <h1>Our Team</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card mb-4">
+                        <a href="https://www.youtube.com/watch?v=0OyIeFlhxtU" target="_blank">
+                            <img class="card-img-top" src="picture/pupe.png">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Pupe</h3>
+                            <p class="card-text">บุญสิตา จงกลม</p>
+                            <a href="https://github.com/CyanKagami" target="_blank" class="btn btn-dark">Github Profile</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <a href="https://github.com/GEOFFCHARGE" target="_blank">
-                        <img src="picture/office.jpg" class="card-img-top" alt="Member 2">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">วัลชัย กล่ำม่วง</h5>
-                        <p class="card-text">67070164</p>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card mb-4">
+                        <a href="https://www.youtube.com/watch?v=--Vf0gqoO54" target="_blank">
+                            <img class="card-img-top" src="picture/office.jpg">
+                        </a>
+                            <div class="card-body">
+                            <h3 class="card-title">Office</h3>
+                            <p class="card-text">วัลชัย กล่ำม่วง</p>
+                            <a href="https://github.com/GEOFFCHARGE" target="_blank" class="btn btn-dark">Github Profile</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-             <div class="col-md-3">
-                <div class="card mb-4">
-                    <a href="https://github.com/WissanupongChanliem" target="_blank">
-                        <img src="picture/arse.png" class="card-img-top" alt="Member 3">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">วิษณุพงศ์ จันทร์เลี่ยม</h5>
-                        <p class="card-text">67070167</p>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card mb-4">
+                        <a href="https://www.youtube.com/watch?v=h-vRZK-d9gM" target="_blank">
+                            <img class="card-img-top" src="picture/arse.png">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Arse(nal)</h3>
+                            <p class="card-text">วิษณุพงศ์ จันทร์เลี่ยม</p>
+                            <a href="https://github.com/WissanupongChanliem" target="_blank" class="btn btn-dark">Github Profile</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <a href="https://github.com/67070179Smith" target="_blank">
-                        <img src="picture/smith.png" class="card-img-top" alt="Member 4">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">สมิต สารบรรณ</h5>
-                        <p class="card-text">67070179</p>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <img class="card-img-top" src="picture/smith.png">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Kia</h3>
+                            <p class="card-text">สมิต สารบรรณ</p>
+                            <a href="https://github.com/67070179Smith" target="_blank" class="btn btn-dark">Github Profile</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
     <div class="p-4 bg-dark text-white text-center">
-        © 2025 <a class="text-white text-decoration-none" href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank">Our Team</a>. All rights reserved.
+        © 2025 <a class="text-white text-decoration-none" href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank">Pomodoro Timer IoT Team</a>. All rights reserved.
     </div>
 </body>
 </html>
