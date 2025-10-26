@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptatum. 
 <img src="https://skillicons.dev/icons?i=arduino,html,bootstrap"/>
 
 ## 🧑‍💻 Contributors
-* [67070094](https://github.com/CyanKagami) บุญสิตา จงกลม
-* [67070164](https://github.com/GEOFFCHARGE) วัลชัย กล่ำม่วง
-* [67070167](https://github.com/WissanupongChanliem) วิษณุพงศ์ จันทร์เลี่ยม
-* [67070179](https://github.com/67070179Smith) สมิต สารบรรณ
+* <a href="https://github.com/CyanKagami" target="_blank" style="text-decoration: none;">67070094</a> บุญสิตา จงกลม
+* <a href="https://github.com/GEOFFCHARGE" target="_blank" style="text-decoration: none;">67070164</a> วัลชัย กล่ำม่วง
+* <a href="https://github.com/WissanupongChanliem" target="_blank" style="text-decoration: none;">67070167</a> วิษณุพงศ์ จันทร์เลี่ยม
+* <a href="https://github.com/67070179Smith" target="_blank" style="text-decoration: none;">67070179</a> สมิต สารบรรณ
