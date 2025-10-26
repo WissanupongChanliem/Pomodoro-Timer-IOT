@@ -1,7 +1,7 @@
 # Physical Computing Project 2025 - IT KMITL
 
 <p align="center">
-    <img width=1000 height=auto src="/image/backdrop.png">
+    <img width=1000 height=auto src="/image/backdrop/pomodoro_text.png">
 </p>
 
 # Pomodoro Timer IoT 🍅
