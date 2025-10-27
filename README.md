@@ -1,8 +1,8 @@
 # Physical Computing Project 2025 - IT KMITL
 
-![Pomodoro Timer Backdrop](/image/backdrop/pomodoro_text.png)
+![](/image/backdrop/pomodoro_text.png)
 
-# Pomodoro Timer IoT 🍅
+# PomoThink 🍅
 > Smart Pomodoro Timer System using IoT for Productivity Enhancement
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptatum. In aliquid reprehenderit praesentium quidem ut similique nostrum voluptatem esse placeat ipsam optio aperiam ex itaque, quae pariatur eveniet suscipit.
