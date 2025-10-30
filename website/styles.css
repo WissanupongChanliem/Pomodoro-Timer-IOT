@@ -13,3 +13,13 @@
 {
     box-shadow: none;
 }
+
+.bento-item
+{
+    height: 200px;
+}
+
+.bento-item-lg
+{
+    height: 425px;
+}
