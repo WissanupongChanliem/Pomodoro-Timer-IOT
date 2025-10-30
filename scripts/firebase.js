@@ -53,7 +53,7 @@ onValue(sessionsRef, (snapshot) => {
     updateChart(chartData);
     if (totalTime > 60)
     {
-        $("#study-time-text").text((totalTime/60).toFixed(2) + " hour");
+        $("#study-time-text").text((totalTime/60).toFixed(2) + " hours");
     }
     else{
         $("#study-time-text").text(totalTime + " minutes");
