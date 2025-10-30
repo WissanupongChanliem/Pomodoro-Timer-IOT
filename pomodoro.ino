@@ -30,10 +30,11 @@ int   stop_button_state;
 int   stop_button_old_state;
 int   restart_button_state;
 int   restart_button_old_state;
+unsigned long restart = 0;
+unsigned long stopped = 0;
 
 /* for counting time*/
 unsigned long old_millis;
-unsigned long restart = 0;
 int   minute;
 int   second;
 int   time_interval;
@@ -225,8 +226,9 @@ void loop() {
   restart_button_state = digitalRead(restartButton);
 
   // stop button
-  if (stop_button_old_state == 1 && stop_button_state == 0)
+  if (stop_button_old_state == 1 && stop_button_state == 0 && ((stopped != 0 && millis() - stopped >= 300) || stopped == 0))
   {
+    stopped = millis();
     switch (state)
     {
     case (1):
@@ -240,7 +242,7 @@ void loop() {
   }
 
   // restart button
-  if (restart_button_old_state == 1 && restart_button_state == 0 && ((restart != 0 && millis() - restart >= 1000) || restart == 0))
+  if (restart_button_old_state == 1 && restart_button_state == 0 && ((restart != 0 && millis() - restart >= 300) || restart == 0))
   {
     restart = millis();
     /* toggle to not open close all the lcd*/
