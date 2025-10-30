@@ -1,0 +1,15 @@
+/* MARK: smooth transition */
+*
+{
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* MARK: page scroll margin */
+#section1, #section2, #section3, #section4
+{
+    scroll-margin-top: 10vh;
+}
+/* MARK: button shadow */
+.navbar-toggler:focus
+{
+    box-shadow: none;
+}
