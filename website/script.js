@@ -1,6 +1,6 @@
-const saved = localStorage.getItem("theme");
-$("html").attr("data-bs-theme", saved);
-$("#switch").text(saved === "dark" ? "Light Theme" : "Dark Theme");
+const savedTheme = localStorage.getItem("theme");
+$("html").attr("data-bs-theme", savedTheme);
+$("#switch").text(savedTheme === "dark" ? "Light Theme" : "Dark Theme");
 $("#switch").click(function()
 {
     let oldTheme = $("html").attr("data-bs-theme");
