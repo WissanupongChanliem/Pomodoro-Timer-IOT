@@ -20,9 +20,9 @@ int status = 0;
 int respond_code;
 
 // time interval
-const int LONG_BREAK = 3;
-const int SHORT_BREAK = 2;
-const int WORKING = 1;
+const int LONG_BREAK = 15;
+const int SHORT_BREAK = 5;
+const int WORKING = 25;
 
 /* for button state checking */
 int   state;
