@@ -8,7 +8,7 @@
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptatum. In aliquid reprehenderit praesentium quidem ut similique nostrum voluptatem esse placeat ipsam optio aperiam ex itaque, quae pariatur eveniet suscipit.
 
 ## 🚀 Languages & Framework
-<img src="https://skillicons.dev/icons?i=arduino,html,bootstrap"/>
+<img src="https://skillicons.dev/icons?i=arduino,html,bootstrap,jquery"/>
 
 ## 🧑‍💻 Contributors
 * [67070094](https://github.com/CyanKagami) บุญสิตา จงกลม
