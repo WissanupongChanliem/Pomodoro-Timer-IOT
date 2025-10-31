@@ -6,7 +6,7 @@
 /* MARK: page scroll margin */
 #section1, #section2, #section3, #section4
 {
-    scroll-margin-top: 10vh;
+    scroll-margin-top: 8vh;
 }
 /* MARK: button shadow */
 .navbar-toggler:focus
