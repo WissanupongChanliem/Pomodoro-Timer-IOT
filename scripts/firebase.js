@@ -25,13 +25,10 @@ const sessionsRef = ref(db, "/");
 let chart = null;
 let chartData = [];
 
-onValue(sessionCountRef, (snapshot) => {
-  const data = snapshot.val();
-  $("#session-count-text").text(data);
-});
-
 onValue(sessionsRef, (snapshot) => {
     let totalTime = 0;
+    let totalLoseFocus = 0;
+    let totalSession = 0;
     chartData = []
     snapshot.forEach((childSnapshot) => {
         const childKey = childSnapshot.key;
@@ -42,9 +39,15 @@ onValue(sessionsRef, (snapshot) => {
             {
                 totalTime += childData.round_studied * 25;
                 chartData.push([parseInt(childKey.slice(7)), childData.round_studied * 25]);
+                totalSession += 1;
             }
-            else{
-                chartData.push([parseInt(childKey.slice(7)), 0]);
+            // else
+            // {
+            //     chartData.push([parseInt(childKey.slice(7)), 0]);
+            // }
+            if (childData.lose_focus)
+            {
+                totalLoseFocus += childData.lose_focus * (10 / 60);
             }
         }
     });
@@ -54,12 +57,15 @@ onValue(sessionsRef, (snapshot) => {
     updateChart();
     if (totalTime > 60)
     {
-        $("#study-time-text").text((totalTime/60).toFixed(2) + " hours");
+        $("#study-time-text").text((totalTime/60).toFixed(2));
+        $("#time-unit-text").text(" hours");
     }
     else{
-        $("#study-time-text").text(totalTime + " minutes");
+        $("#study-time-text").text(totalTime);
+        $("#time-unit-text").text(" minutes");
     }
-    
+    $("#session-count-text").text(totalSession);
+    $("#focus-percent-text").text((((totalTime - totalLoseFocus) / totalTime) * 100).toFixed(2) + " %");
 });
 
 async function updateChart(){
@@ -74,11 +80,11 @@ async function updateChart(){
         {
         type: 'bar',
         data: {
-            labels: chartData.map(row => row[0]),
+            labels: chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) : Math.max(chartData.length - 20, 0), chartData.length).map(row => row[0]),
             datasets: [
             {
                 label: 'Time (minutes) spend on each session',
-                data: chartData.map(row => row[1]),
+                data: chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) : Math.max(chartData.length - 20, 0), chartData.length).map(row => row[1]),
                 backgroundColor: '#fc535c'
             }
             ]
@@ -94,7 +100,7 @@ async function updateChart(){
 
 
 export function repaintChart(theme) {
-    
+
     Chart.defaults.color = theme === "dark" ? "#fff" : "#666";
     Chart.defaults.borderColor = theme === "dark" ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 0.1)";
     updateChart();

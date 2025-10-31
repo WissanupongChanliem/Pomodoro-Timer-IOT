@@ -14,3 +14,17 @@
     box-shadow: none !important;
     outline: none !important;
 }
+
+/* MARK: text color */
+.accent-text-red
+{
+    color: #fc535c;
+    display: inline;
+}
+
+/* MARK: text color */
+.accent-text-green
+{
+    color: #35ca6b;
+    display: inline;
+}
