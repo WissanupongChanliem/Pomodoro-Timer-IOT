@@ -1,9 +1,7 @@
-import { repaintChart } from "../scripts/firebase.js";
 // MARK: save theme
 const savedTheme = localStorage.getItem("theme");
 $("html").attr("data-bs-theme", savedTheme);
 $("#switch").text(savedTheme === "dark" ? "Light Theme" : "Dark Theme");
-repaintChart(savedTheme);
 // MARK: switch theme
 $("#switch").click(function()
 {
@@ -11,6 +9,5 @@ $("#switch").click(function()
     let newTheme = (oldTheme === "dark" ? "light" : "dark");
     $("html").attr("data-bs-theme", newTheme);
     $("#switch").text(newTheme === "dark" ? "Light Theme" : "Dark Theme");
-    repaintChart(newTheme);
     localStorage.setItem("theme", newTheme);
 });
