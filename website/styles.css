@@ -9,8 +9,8 @@
     scroll-margin-top: 10vh;
 }
 /* MARK: button shadow */
-.navbar .navbar-toggler:focus
+.navbar-toggler:focus
 {
-    box-shadow: none;
-    outline: none;
+    box-shadow: none !important;
+    outline: none !important;
 }
