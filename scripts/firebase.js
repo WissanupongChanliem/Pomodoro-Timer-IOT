@@ -23,6 +23,7 @@ const db = getDatabase(app);
 const sessionCountRef = ref(db, "/Session");
 const sessionsRef = ref(db, "/");
 let chart = null;
+let chartData = [];
 
 onValue(sessionCountRef, (snapshot) => {
   const data = snapshot.val();
@@ -31,7 +32,7 @@ onValue(sessionCountRef, (snapshot) => {
 
 onValue(sessionsRef, (snapshot) => {
     let totalTime = 0;
-    let chartData = [];
+    chartData = []
     snapshot.forEach((childSnapshot) => {
         const childKey = childSnapshot.key;
         const childData = childSnapshot.val();
@@ -50,7 +51,7 @@ onValue(sessionsRef, (snapshot) => {
     chartData.sort((a, b) => {
         return a[0] - b[0];
     });
-    updateChart(chartData);
+    updateChart();
     if (totalTime > 60)
     {
         $("#study-time-text").text((totalTime/60).toFixed(2) + " hours");
@@ -61,7 +62,7 @@ onValue(sessionsRef, (snapshot) => {
     
 });
 
-async function updateChart(data){
+async function updateChart(){
     let canvas = document.getElementById('usage');
 
     if(chart){
@@ -73,11 +74,11 @@ async function updateChart(data){
         {
         type: 'bar',
         data: {
-            labels: data.map(row => row[0]),
+            labels: chartData.map(row => row[0]),
             datasets: [
             {
                 label: 'Time (minutes) spend on each session',
-                data: data.map(row => row[1]),
+                data: chartData.map(row => row[1]),
                 backgroundColor: '#fc535c'
             }
             ]
@@ -88,4 +89,13 @@ async function updateChart(data){
         }
         }
     );
+}
+
+
+
+export function repaintChart(theme) {
+    
+    Chart.defaults.color = theme === "dark" ? "#fff" : "#666";
+    Chart.defaults.borderColor = theme === "dark" ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 0.1)";
+    updateChart();
 }
