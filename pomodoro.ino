@@ -7,7 +7,7 @@ void  init();
 void  print_timer();
 
 LiquidCrystal_I2C lcd(0x27,  16, 2);
-Firebase fb(REFERENCE_URL, AUTH_TOKEN);
+Firebase fb(REFERENCE_URL);
 WiFiClient network;
 
 /* for on in firebase*/
