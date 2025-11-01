@@ -59,7 +59,7 @@ onValue(sessionsRef, (snapshot) => {
         $("#time-unit-text").text(" minutes");
     }
     $("#session-count-text").text(totalSession);
-    $("#focus-percent-text").text((((totalTime - totalLoseFocus) / totalTime) * 100).toFixed(2) + " %");
+    $("#focus-percent-text").text((((totalTime - totalLoseFocus) / totalTime) * 100).toFixed(2) + "%");
 });
 
 async function updateChart(){
