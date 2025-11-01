@@ -45,7 +45,7 @@ PomoThink เชื่อมต่อกับ **Firebase Realtime Database** �
 - 🔄 **ปุ่ม STOP / RESTART สำหรับควบคุมรอบการทำงาน**
 
 ## 🎨 Poster
-![](/image/poster/PomoThink_Poster.png)
+![](/image/pomothink/PomoThink_Poster.png)
 
 ## 🚀 Languages, Framework & Tool
 <img src="https://skillicons.dev/icons?i=arduino,html,css,js,bootstrap,jquery,firebase"/>
