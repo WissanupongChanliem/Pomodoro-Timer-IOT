@@ -24,7 +24,7 @@
     <!-- MARK: selection page -->
     <div id="section0" class="container-fluid p-4 d-flex flex-column justify-content-center align-items-center vh-100 text-light text-center position-relative overflow-hidden">
         <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-            <source src="../video/backdrop.mp4" type="video/mp4">
+            <source src="../video/pomothink/pomothink.mp4" type="video/mp4">
         </video>
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.75);"></div>
         <div class="position-relative">
@@ -68,7 +68,38 @@
     <div id="section1" class="container p-4">
         <h1 class="text-center">About</h1>
         <hr>
-        <img class="img-fluid rounded shadow" src="../image/backdrop/pomothink_normal.png">
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_1.png">
+                </div>
+                <div class="carousel-item">
+                <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_2.png">
+                </div>
+                <div class="carousel-item">
+                <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_3.png">
+                </div>
+                <div class="carousel-item">
+                <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_4.png">
+                </div>
+                <div class="carousel-item">
+                <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_5.png">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
         <hr>
         <h3>Abstract</h3>
         <p>โครงงาน PomoThink มีวัตถุประสงค์เพื่อพัฒนา Pomodoro Timer บนบอร์ด Arduino UNO R4 WiFi โดยใช้ Ultrasonic Sensor ตรวจจับสถานะของผู้ใช้งานว่าอยู่หน้าโต๊ะทำงานหรือไม่ เพื่อช่วยเพิ่มประสิทธิภาพในการทำงาน ช่วยให้ทำงานได้อย่างมีสมาธิและช่วยลดความเหนื่อยล้าตามหลัก Pomodoro Technique ซึ่งเป็นเทคนิคการบริหารเวลาที่แบ่งช่วงการทำงานและการพักอย่างเป็นระบบ ซึ่งข้อมูลสถานะของผู้ใช้งานที่ตรวจจับได้จะถูกส่งและจัดเก็บไว้ในฐานข้อมูล Firebase และสามารถแสดงผลแบบ Real-time ผ่านหน้าเว็บไซต์และจอ LCD</p>
