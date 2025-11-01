@@ -1,16 +1,47 @@
 import { repaintChart } from "../scripts/firebase.js";
-// MARK: save theme
-const savedTheme = localStorage.getItem("theme");
-$("html").attr("data-bs-theme", savedTheme);
-$("#switch").text(savedTheme === "dark" ? "Light Theme" : "Dark Theme");
-repaintChart(savedTheme);
-// MARK: switch theme
-$("#switch").click(function()
+
+// MARK: apply theme
+function applyTheme(theme)
 {
-    let oldTheme = $("html").attr("data-bs-theme");
-    let newTheme = (oldTheme === "dark" ? "light" : "dark");
-    $("html").attr("data-bs-theme", newTheme);
-    $("#switch").text(newTheme === "dark" ? "Light Theme" : "Dark Theme");
-    repaintChart(newTheme);
-    localStorage.setItem("theme", newTheme);
+    if (theme === "auto")
+    {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+    }
+    $("html").attr("data-bs-theme", theme);
+    repaintChart(theme);
+}
+
+// MARK: load saved theme
+let savedTheme = localStorage.getItem("theme") || "auto";
+if (savedTheme === "dark")
+{
+    $("#radioDefault1").prop("checked", true);
+}
+else if (savedTheme === "light")
+{
+    $("#radioDefault2").prop("checked", true);
+}
+else
+{
+    $("#radioDefault3").prop("checked", true);
+}
+applyTheme(savedTheme);
+
+// MARK: switch theme
+$("#radioDefault1").click(function()
+{
+    localStorage.setItem("theme", "dark");
+    applyTheme("dark");
+});
+
+$("#radioDefault2").click(function()
+{
+    localStorage.setItem("theme", "light");
+    applyTheme("light");
+});
+
+$("#radioDefault3").click(function()
+{
+    localStorage.setItem("theme", "auto");
+    applyTheme("auto");
 });

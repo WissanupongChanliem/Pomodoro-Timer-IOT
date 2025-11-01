@@ -24,7 +24,7 @@
     <!-- MARK: selection page -->
     <div id="section0" class="container-fluid p-4 d-flex flex-column justify-content-center align-items-center vh-100 text-light text-center position-relative overflow-hidden">
         <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-            <source src="../video/backdrop.mp4" type="video/mp4">
+            <source src="../video/pomothink/pomothink.mp4" type="video/mp4">
         </video>
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.75);"></div>
         <div class="position-relative">
@@ -58,17 +58,76 @@
                         <a class="nav-link" href="#section4">Our Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="switch">Dark Mode</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#setting">Dark Theme</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- MARK: modal -->
+    <div class="modal fade" id="setting">
+        <div class="modal-dialog modal-dialog-centered px-3">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Dark Theme</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                        <label class="form-check-label" for="radioDefault1">On</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+                        <label class="form-check-label" for="radioDefault2">Off</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+                        <label class="form-check-label" for="radioDefault3">Device Default</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- MARK: context -->
     <div id="section1" class="container p-4">
         <h1 class="text-center">About</h1>
         <hr>
-        <img class="img-fluid rounded shadow" src="../image/backdrop/pomodoro_text.png">
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_1.png">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_2.png">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_3.png">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_4.png">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid rounded shadow" src="../image/pomothink/pomothink_5.png">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
         <hr>
         <h3>Abstract</h3>
         <p>โครงงาน PomoThink มีวัตถุประสงค์เพื่อพัฒนา Pomodoro Timer บนบอร์ด Arduino UNO R4 WiFi โดยใช้ Ultrasonic Sensor ตรวจจับสถานะของผู้ใช้งานว่าอยู่หน้าโต๊ะทำงานหรือไม่ เพื่อช่วยเพิ่มประสิทธิภาพในการทำงาน ช่วยให้ทำงานได้อย่างมีสมาธิและช่วยลดความเหนื่อยล้าตามหลัก Pomodoro Technique ซึ่งเป็นเทคนิคการบริหารเวลาที่แบ่งช่วงการทำงานและการพักอย่างเป็นระบบ ซึ่งข้อมูลสถานะของผู้ใช้งานที่ตรวจจับได้จะถูกส่งและจัดเก็บไว้ในฐานข้อมูล Firebase และสามารถแสดงผลแบบ Real-time ผ่านหน้าเว็บไซต์และจอ LCD</p>
@@ -145,7 +204,7 @@
                         <img class="card-img-top" src="../image/member/pupe.png">
                     </a>
                     <div class="card-body d-flex flex-column">
-                        <h3 class="card-title">Pupé (ปูเป้)</h3>
+                        <h3 class="card-title">Pupé</h3>
                         <p class="card-text">67070094 บุญสิตา จงกลม</p>
                         <a href="https://github.com/CyanKagami" target="_blank" class="btn btn-dark">Github Profile</a>
                     </div>
@@ -157,7 +216,7 @@
                         <img class="card-img-top" src="../image/member/office.png">
                     </a>
                         <div class="card-body d-flex flex-column">
-                        <h3 class="card-title">Office (ออฟฟิศ)</h3>
+                        <h3 class="card-title">Office</h3>
                         <p class="card-text">67070164 วัลชัย กล่ำม่วง</p>
                         <a href="https://github.com/GEOFFCHARGE" target="_blank" class="btn btn-dark">Github Profile</a>
                     </div>
@@ -169,7 +228,7 @@
                         <img class="card-img-top" src="../image/member/arse.png">
                     </a>
                     <div class="card-body d-flex flex-column">
-                        <h3 class="card-title">Arsé (อาเซ่)</h3>
+                        <h3 class="card-title">Arsé</h3>
                         <p class="card-text">67070167 วิษณุพงศ์ จันทร์เลี่ยม</p>
                         <a href="https://github.com/WissanupongChanliem" target="_blank" class="btn btn-dark">Github Profile</a>
                     </div>
@@ -181,7 +240,7 @@
                         <img class="card-img-top" src="../image/member/smith.png">
                     </a>
                     <div class="card-body d-flex flex-column">
-                        <h3 class="card-title">Kia (เกียร์)</h3>
+                        <h3 class="card-title">Kia</h3>
                         <p class="card-text">67070179 สมิต สารบรรณ</p>
                         <a href="https://github.com/67070179Smith" target="_blank" class="btn btn-dark">Github Profile</a>
                     </div>
