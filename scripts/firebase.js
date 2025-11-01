@@ -38,7 +38,7 @@ onValue(sessionsRef, (snapshot) => {
             if (childData.round_studied)
             {
                 totalTime += childData.round_studied * 25;
-                chartData.push([parseInt(childKey.slice(7)), childData.round_studied * 25]);
+                chartData.push([parseInt(childKey.slice(7)), childData.round_studied * 25, childData.status]);
                 totalSession += 1;
             }
             // else
@@ -75,17 +75,19 @@ async function updateChart(){
         chart.clear();
         chart.destroy();
     }
+    let displayData = chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) : Math.max(chartData.length - 20, 0), chartData.length);
+
     chart = new Chart(
         canvas,
         {
         type: 'bar',
         data: {
-            labels: chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) : Math.max(chartData.length - 20, 0), chartData.length).map(row => row[0]),
+            labels: displayData.map(row => row[0]),
             datasets: [
             {
                 label: 'Time (minutes) spend on each session',
-                data: chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) : Math.max(chartData.length - 20, 0), chartData.length).map(row => row[1]),
-                backgroundColor: '#fc535c'
+                data: displayData.map(row => row[1]),
+                backgroundColor: displayData.map(row => row[2] === "study" ? '#35ca6b' : '#fc535c')
             }
             ]
         },
