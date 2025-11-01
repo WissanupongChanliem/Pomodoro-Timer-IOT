@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-import { getDatabase, ref, get, child, onValue } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -19,8 +19,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-
-const sessionCountRef = ref(db, "/Session");
 const sessionsRef = ref(db, "/");
 let chart = null;
 let chartData = [];
@@ -41,10 +39,6 @@ onValue(sessionsRef, (snapshot) => {
                 chartData.push([parseInt(childKey.slice(7)), childData.round_studied * 25, childData.status]);
                 totalSession += 1;
             }
-            // else
-            // {
-            //     chartData.push([parseInt(childKey.slice(7)), 0]);
-            // }
             if (childData.lose_focus)
             {
                 totalLoseFocus += childData.lose_focus * (10 / 60);
@@ -75,7 +69,8 @@ async function updateChart(){
         chart.clear();
         chart.destroy();
     }
-    let displayData = chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) : Math.max(chartData.length - 20, 0), chartData.length);
+    let displayData = chartData.slice((window.innerWidth <= 960) ? Math.max(chartData.length - 10, 0) :
+    Math.max(chartData.length - 20, 0), chartData.length);
 
     chart = new Chart(
         canvas,
