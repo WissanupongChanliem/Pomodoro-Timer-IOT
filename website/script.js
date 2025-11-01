@@ -1,4 +1,4 @@
-import { repaintChart } from "../scripts/firebase.js";
+import { repaintChart } from "./firebase.js";
 
 // MARK: apply theme
 function applyTheme(theme)
