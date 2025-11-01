@@ -24,12 +24,12 @@
     <!-- MARK: selection page -->
     <div id="section0" class="container-fluid p-4 d-flex flex-column justify-content-center align-items-center vh-100 text-light text-center position-relative overflow-hidden">
         <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-            <source src="../video/pomothink/pomothink.mp4" type="video/mp4">
+            <source src="../video/pomothink.mp4" type="video/mp4">
         </video>
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.75);"></div>
         <div class="position-relative">
             <h1 class="display-1 fw-medium mb-3">🍅 PomoThink</h1>
-            <p class="mb-3">Smart Pomodoro Timer System using IoT for Productivity Enhancement</p>
+            <p class="fw-light mb-3">Smart Pomodoro Timer System using IoT for Productivity Enhancement</p>
             <div class="d-flex pt-3 justify-content-center">
                 <a href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank" class="btn btn-light me-3 ps-4 pe-4">GitHub</a>
                 <a href="#section2" class="btn btn-outline-light ms-3 ps-4 pe-4">Dashboard</a>
@@ -58,7 +58,7 @@
                         <a class="nav-link" href="#section4">Our Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#setting">Dark Theme</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#setting">Setting</a>
                     </li>
                 </ul>
             </div>
@@ -69,21 +69,24 @@
         <div class="modal-dialog modal-dialog-centered px-3">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Dark Theme</h4>
+                    <h4 class="modal-title">Setting</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                        <label class="form-check-label" for="radioDefault1">On</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
-                        <label class="form-check-label" for="radioDefault2">Off</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
-                        <label class="form-check-label" for="radioDefault3">Device Default</label>
+                    <div class="d-flex gap-3">
+                        <p class="mb-0">Dark Theme</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">On</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+                            <label class="form-check-label" for="radioDefault2">Off</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+                            <label class="form-check-label" for="radioDefault3">Device Default</label>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -136,46 +139,46 @@
         <p>โครงงาน PomoThink สามารถตรวจจับผู้ใช้งานได้จริงด้วย Ultrasonic sensor ช่วยเพิ่มความแม่นยำในการนับเวลา โดยจะไม่นับเวลาหากผู้ใช้งานไม่อยู่หน้าโต๊ะทำงาน มีการเชื่อมต่อกับฐานข้อมูล Firebase ช่วยให้ผู้ใช้งานสามารถติดตามพฤติกรรมของตนเองได้ มี LED บอกสถานะการทำงานของอุปกรณ์และสามารถหยุดพักชั่วคราวหรือเริ่มการนับเวลาใหม่ได้โดยการกดปุ่ม</p>
         <br>
         <h3>Hardware</h3>
-        <div class="card mb-3 shadow border-0 border-start border-primary border-5 rounded-2">
+        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #0d6efd;">
             <div class="card-body">
                 <h6 class="text-primary">Microcontroller</h6>
                 <h4>Arduino Uno R4 WiFi</h4>
             </div>
         </div>
-        <div class="card mb-3 shadow border-0 border-start border-secondary border-5 rounded-2">
+        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #198754;">
             <div class="card-body">
-                <h6 class="text-secondary">Sensor</h6>
+                <h6 class="text-success">Sensor</h6>
                 <h4>Ultrasonic Sensor</h4>
             </div>
         </div>
-        <div class="card mb-3 shadow border-0 border-start border-danger border-5 rounded-2">
+        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #dc3545;">
             <div class="card-body">
                 <h6 class="text-danger">Input device</h6>
                 <h4>Button</h4>
             </div>
         </div>
-        <div class="card mb-3 shadow border-0 border-start border-success border-5 rounded-2">
+        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #ffc107;">
             <div class="card-body">
-                <h6 class="text-success">Output device</h6>
+                <h6 class="text-warning">Output device</h6>
                 <h4>Light Emitting Diode (LED)</h4>
             </div>
         </div>
-        <div class="card mb-3 shadow border-0 border-start border-success border-5 rounded-2">
+        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #ffc107;">
             <div class="card-body">
-                <h6 class="text-success">Output device</h6>
+                <h6 class="text-warning">Output device</h6>
                 <h4>Liquid Crystal Display (LCD)</h4>
             </div>
         </div>
         <br>
         <h3>Software</h3>
-        <img class="img-fluid" src="https://skillicons.dev/icons?i=arduino,c,html,css,js,bootstrap,jquery,firebase">
+        <img class="img-fluid mb-4" src="https://skillicons.dev/icons?i=arduino,c,html,css,js,bootstrap,jquery,firebase">
     </div>
     <hr>
     <!-- MARK: dashboard -->
     <div id="section2" class="container p-4">
         <h1 class="text-center">Dashboard</h1>
         <hr>
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-12 col-lg-9 mb-4">
                 <div class="card bento-item-lg h-100 shadow">
                     <div class="card-body">
@@ -222,7 +225,37 @@
     <div id="section3" class="container p-4">
         <h1 class="text-center">Resource</h1>
         <hr>
-        <iframe class="mb-4 shadow" style="overflow-x: auto; overflow-y: scroll; width:100%; height:75vh; border: 1px solid #D2D2D2; border-radius: 5px;" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Farduino%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></iframe>
+        <iframe class="mb-4 shadow" style="overflow-x: auto; overflow-y: scroll; width:100%; height:75vh; border-radius: 5px;" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Farduino%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></iframe>
+        <br><br>
+        <div class="row justify-content-center g-4 mb-4">
+            <div class="col-12 col-md-4">
+                <div class="card text-center shadow">
+                    <div class="card-body">
+                        <h5 class="text-primary">Source Code</h5>
+                        <p class="mb-3">GitHub Repository</p>
+                        <a href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank" class="btn btn-primary w-100">View GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card text-center shadow">
+                    <div class="card-body">
+                        <h5 class="text-success">Poster</h5>
+                        <p class="mb-3">PDF file</p>
+                        <a href="../image/poster/pomothink_poster.pdf" target="_blank" class="btn btn-success w-100">View Poster</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card text-center shadow">
+                    <div class="card-body">
+                        <h5 class="text-danger">Presentation</h5>
+                        <p class="mb-3">Youtube</p>
+                        <a href="https://www.youtube.com/watch?v=CSdIJq4S4-Q" target="_blank" class="btn btn-danger w-100">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <hr>
     <!-- MARK: team -->
@@ -235,10 +268,10 @@
                     <a href="https://www.youtube.com/watch?v=0OyIeFlhxtU" target="_blank">
                         <img class="card-img-top" src="../image/member/pupe.png">
                     </a>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <h3 class="card-title">Pupé</h3>
                         <p class="card-text">67070094 บุญสิตา จงกลม</p>
-                        <a href="https://github.com/CyanKagami" target="_blank" class="btn btn-dark">Github Profile</a>
+                        <a href="https://github.com/CyanKagami" target="_blank" class="btn btn-dark w-100">Github Profile</a>
                     </div>
                 </div>
             </div>
@@ -247,10 +280,10 @@
                     <a href="https://www.youtube.com/watch?v=--Vf0gqoO54" target="_blank">
                         <img class="card-img-top" src="../image/member/office.png">
                     </a>
-                        <div class="card-body d-flex flex-column">
+                        <div class="card-body">
                         <h3 class="card-title">Office</h3>
                         <p class="card-text">67070164 วัลชัย กล่ำม่วง</p>
-                        <a href="https://github.com/GEOFFCHARGE" target="_blank" class="btn btn-dark">Github Profile</a>
+                        <a href="https://github.com/GEOFFCHARGE" target="_blank" class="btn btn-dark w-100">Github Profile</a>
                     </div>
                 </div>
             </div>
@@ -259,10 +292,10 @@
                     <a href="https://www.youtube.com/watch?v=h-vRZK-d9gM" target="_blank">
                         <img class="card-img-top" src="../image/member/arse.png">
                     </a>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <h3 class="card-title">Arsé</h3>
                         <p class="card-text">67070167 วิษณุพงศ์ จันทร์เลี่ยม</p>
-                        <a href="https://github.com/WissanupongChanliem" target="_blank" class="btn btn-dark">Github Profile</a>
+                        <a href="https://github.com/WissanupongChanliem" target="_blank" class="btn btn-dark w-100">Github Profile</a>
                     </div>
                 </div>
             </div>
@@ -271,10 +304,10 @@
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
                         <img class="card-img-top" src="../image/member/smith.png">
                     </a>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <h3 class="card-title">Kia</h3>
                         <p class="card-text">67070179 สมิต สารบรรณ</p>
-                        <a href="https://github.com/67070179Smith" target="_blank" class="btn btn-dark">Github Profile</a>
+                        <a href="https://github.com/67070179Smith" target="_blank" class="btn btn-dark w-100">Github Profile</a>
                     </div>
                 </div>
             </div>
