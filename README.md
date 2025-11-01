@@ -47,8 +47,8 @@ PomoThink เชื่อมต่อกับ **Firebase Realtime Database** �
 ## 🎨 Poster
 ![](/image/poster/pomothink_poster.png)
 
-## 🚀 Languages & Framework
-<img src="https://skillicons.dev/icons?i=arduino,html,css,bootstrap,jquery"/>
+## 🚀 Languages, Framework & Tool
+<img src="https://skillicons.dev/icons?i=arduino,html,css,js,bootstrap,jquery,firebase"/>
 
 ## 🧑‍💻 Contributors
 * [67070094](https://github.com/CyanKagami) บุญสิตา จงกลม
