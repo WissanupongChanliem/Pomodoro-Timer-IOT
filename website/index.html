@@ -13,7 +13,7 @@
     <!-- MARK: chartjs import -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
     <!-- MARK: code page import -->
-    <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></script>
+    <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Farduino%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></script>
     <!-- MARK: font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -131,9 +131,15 @@
         <hr>
         <h3>Abstract</h3>
         <p>โครงงาน PomoThink มีวัตถุประสงค์เพื่อพัฒนา Pomodoro Timer บนบอร์ด Arduino UNO R4 WiFi โดยใช้ Ultrasonic Sensor ตรวจจับสถานะของผู้ใช้งานว่าอยู่หน้าโต๊ะทำงานหรือไม่ เพื่อช่วยเพิ่มประสิทธิภาพในการทำงาน ช่วยให้ทำงานได้อย่างมีสมาธิและช่วยลดความเหนื่อยล้าตามหลัก Pomodoro Technique ซึ่งเป็นเทคนิคการบริหารเวลาที่แบ่งช่วงการทำงานและการพักอย่างเป็นระบบ ซึ่งข้อมูลสถานะของผู้ใช้งานที่ตรวจจับได้จะถูกส่งและจัดเก็บไว้ในฐานข้อมูล Firebase และสามารถแสดงผลแบบ Real-time ผ่านหน้าเว็บไซต์และจอ LCD</p>
-        <hr>
+        <br>
         <h3>What make this project special?</h3>
         <p>โครงงาน PomoThink สามารถตรวจจับผู้ใช้งานได้จริงด้วย Ultrasonic sensor ช่วยเพิ่มความแม่นยำในการนับเวลา โดยจะไม่นับเวลาหากผู้ใช้งานไม่อยู่หน้าโต๊ะทำงาน มีการเชื่อมต่อกับฐานข้อมูล Firebase ช่วยให้ผู้ใช้งานสามารถติดตามพฤติกรรมของตนเองได้ มี LED บอกสถานะการทำงานของอุปกรณ์และสามารถหยุดพักชั่วคราวหรือเริ่มการนับเวลาใหม่ได้โดยการกดปุ่ม</p>
+        <br>
+        <h3>Hardware</h3>
+        <p>โครงงาน PomoThink มีวัตถุประสงค์เพื่อพัฒนา Pomodoro Timer บนบอร์ด Arduino UNO R4 WiFi โดยใช้ Ultrasonic Sensor ตรวจจับสถานะของผู้ใช้งานว่าอยู่หน้าโต๊ะทำงานหรือไม่ เพื่อช่วยเพิ่มประสิทธิภาพในการทำงาน ช่วยให้ทำงานได้อย่างมีสมาธิและช่วยลดความเหนื่อยล้าตามหลัก Pomodoro Technique ซึ่งเป็นเทคนิคการบริหารเวลาที่แบ่งช่วงการทำงานและการพักอย่างเป็นระบบ ซึ่งข้อมูลสถานะของผู้ใช้งานที่ตรวจจับได้จะถูกส่งและจัดเก็บไว้ในฐานข้อมูล Firebase และสามารถแสดงผลแบบ Real-time ผ่านหน้าเว็บไซต์และจอ LCD</p>
+        <br>
+        <h3>Software</h3>
+        <p>โครงงาน PomoThink มีวัตถุประสงค์เพื่อพัฒนา Pomodoro Timer บนบอร์ด Arduino UNO R4 WiFi โดยใช้ Ultrasonic Sensor ตรวจจับสถานะของผู้ใช้งานว่าอยู่หน้าโต๊ะทำงานหรือไม่ เพื่อช่วยเพิ่มประสิทธิภาพในการทำงาน ช่วยให้ทำงานได้อย่างมีสมาธิและช่วยลดความเหนื่อยล้าตามหลัก Pomodoro Technique ซึ่งเป็นเทคนิคการบริหารเวลาที่แบ่งช่วงการทำงานและการพักอย่างเป็นระบบ ซึ่งข้อมูลสถานะของผู้ใช้งานที่ตรวจจับได้จะถูกส่งและจัดเก็บไว้ในฐานข้อมูล Firebase และสามารถแสดงผลแบบ Real-time ผ่านหน้าเว็บไซต์และจอ LCD</p>
     </div>
     <!-- MARK: dashboard -->
     <div id="section2" class="container p-4">
@@ -186,7 +192,7 @@
         <h1 class="text-center">Resource</h1>
         <hr>
         <h3>Source Code</h3>
-        <iframe class="shadow" style="overflow-x: auto; overflow-y: scroll; width:100%; height:75vh; border: 1px solid #D2D2D2; border-radius: 5px;" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></iframe>
+        <iframe class="shadow" style="overflow-x: auto; overflow-y: scroll; width:100%; height:75vh; border: 1px solid #D2D2D2; border-radius: 5px;" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Farduino%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></iframe>
         <hr>
         <h3>Tutorial</h3>
         <div class="ratio ratio-16x9">
