@@ -48,13 +48,10 @@ PomoThink เชื่อมต่อกับ **Firebase Realtime Database** �
 ![](/image/poster/pomothink_poster.png)
 
 ## 🎥 Presentation Video
-[![](/image/pomothink/pomothink_0.png)](https://www.youtube.com/watch?v=9Ct29JOQauQ)
+`https://www.youtube.com/watch?v=9Ct29JOQauQ`
 
-## Website
-
-```
-https://wissanupongchanliem.github.io/Pomodoro-Timer-IOT/website/
-```
+## 🌐 Website
+`https://wissanupongchanliem.github.io/Pomodoro-Timer-IOT/website/`
 
 ## 🚀 Languages, Framework & Tool
 <img src="https://skillicons.dev/icons?i=arduino,html,css,js,bootstrap,jquery,firebase"/>
