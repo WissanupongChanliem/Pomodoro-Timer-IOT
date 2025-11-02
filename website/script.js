@@ -47,23 +47,34 @@ $("#radioDefault3").click(function()
 });
 
 // MARK: cycle image
-let imagePupe = ["../image/member/pupe1.png", "../image/member/pupe2.png"];
-let imageOffice = ["../image/member/office1.png", "../image/member/office2.png"];
-let imageArse = ["../image/member/arse1.png", "../image/member/arse2.png"];
-let imageKia = ["../image/member/kia1.png", "../image/member/kia2.png"];
+let image1 = ["../image/member/pupe1.png", "../image/member/pupe2.png"];
+let image2 = ["../image/member/office1.png", "../image/member/office2.png"];
+let image3 = ["../image/member/arse1.png", "../image/member/arse2.png"];
+let image4 = ["../image/member/kia1.png", "../image/member/kia2.png"];
 let index = 0;
-const intervalTime = 3000;
 
 function cycleImage()
 {
     index = (index + 1) % 2;
-    $("#pupe").attr("src", imagePupe[index]);
-    $("#office").attr("src", imageOffice[index]);
-    $("#arse").attr("src", imageArse[index]);
-    $("#kia").attr("src", imageKia[index]);
+    $("#image1").fadeOut(400, function()
+    {
+        $(this).attr("src", image1[index]).fadeIn(400);
+    });
+    $("#image2").fadeOut(400, function()
+    {
+        $(this).attr("src", image2[index]).fadeIn(400);
+    });
+    $("#image3").fadeOut(400, function()
+    {
+        $(this).attr("src", image3[index]).fadeIn(400);
+    });
+    $("#image4").fadeOut(400, function()
+    {
+        $(this).attr("src", image4[index]).fadeIn(400);
+    });
 }
 
 $(document).ready(function()
 {
-    setInterval(cycleImage, intervalTime);
+    setInterval(cycleImage, 3000);
 });
