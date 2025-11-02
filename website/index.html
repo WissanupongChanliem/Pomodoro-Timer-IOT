@@ -102,7 +102,7 @@
     <div id="section1" class="container p-4">
         <h1 class="text-center">❓ About</h1>
         <hr>
-        <div id="slideshow" class="carousel slide shadow" data-bs-ride="carousel">
+        <div id="slideshow" class="carousel slide shadow mb-4" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
@@ -154,12 +154,15 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
-        <hr>
+        <br>
         <h3>Abstract</h3>
         <p>โครงงาน PomoThink มีวัตถุประสงค์เพื่อพัฒนา Pomodoro Timer บนบอร์ด Arduino UNO R4 WiFi โดยใช้ Ultrasonic Sensor ตรวจจับสถานะของผู้ใช้งานว่าอยู่หน้าโต๊ะทำงานหรือไม่ เพื่อช่วยเพิ่มประสิทธิภาพในการทำงาน ช่วยให้ทำงานได้อย่างมีสมาธิและช่วยลดความเหนื่อยล้าตามหลัก Pomodoro Technique ซึ่งเป็นเทคนิคการบริหารเวลาที่แบ่งช่วงการทำงานและการพักอย่างเป็นระบบ ซึ่งข้อมูลสถานะของผู้ใช้งานที่ตรวจจับได้จะถูกส่งและจัดเก็บไว้ในฐานข้อมูล Firebase และสามารถแสดงผลแบบ Real-time ผ่านหน้าเว็บไซต์และจอ LCD</p>
         <br>
         <h3>What make this project special?</h3>
         <p>โครงงาน PomoThink สามารถตรวจจับผู้ใช้งานได้จริงด้วย Ultrasonic sensor ช่วยเพิ่มความแม่นยำในการนับเวลา โดยจะไม่นับเวลาหากผู้ใช้งานไม่อยู่หน้าโต๊ะทำงาน มีการเชื่อมต่อกับฐานข้อมูล Firebase ช่วยให้ผู้ใช้งานสามารถติดตามพฤติกรรมของตนเองได้ มี LED บอกสถานะการทำงานของอุปกรณ์และสามารถหยุดพักชั่วคราวหรือเริ่มการนับเวลาใหม่ได้โดยการกดปุ่ม</p>
+        <br>
+        <h3>Experience</h3>
+        <p>โครงงาน Pomodoro Timer ของพวกเราในเริ่มแรก พวกเราวางแผนไว้ว่าจะเพิ่มฟังก์ชันเสียงแจ้งเตือนเมื่อครบเวลา แต่เนื่องจากไม่สามารถสั่งซื้ออุปกรณ์ได้ทันตามกำหนด จึงไม่ได้ทดสอบในส่วนนี้ นอกจากนี้ยังพบปัญหาหลายเรื่องระหว่างการพัฒนา เช่น การบันทึกข้อมูลแบบเรียลไทม์ที่ทำให้ตัวจับเวลาเกิดความหน่วง, ปัญหา button bounce, และค่าที่คลาดเคลื่อนจากเซนเซอร์ Ultrasonic ในบางครั้ง อย่างไรก็ตาม พวกเราสามารถแก้ไขปัญหาเหล่านี้ได้ด้วยการศึกษาข้อมูลเพิ่มเติมและใช้ความคิดสร้างสรรค์ในการหาวิธีแก้ไข</p>
         <br>
         <h3>Hardware</h3>
         <p>Click to see image</p>
@@ -312,7 +315,7 @@
                 <div class="card text-center shadow">
                     <div class="card-body">
                         <h5 class="text-danger">Circuit Design</h5>
-                        <p class="mb-3">Tinkercad</p>
+                        <p class="mb-3">Tinkercad link</p>
                         <a href="https://www.tinkercad.com/things/80q2PDwYado-pomodoro-iot-design-v1?sharecode=dArc3a_W-uk7-rSiHpFvk-nNUXuz9ISusRRwvf50VaY" target="_blank" class="btn btn-danger w-100">Appreciate Design</a>
                     </div>
                 </div>
@@ -343,7 +346,8 @@
                     </a>
                     <div class="card-body">
                         <h3 class="card-title">Pupé</h3>
-                        <p class="card-text">67070094 บุญสิตา จงกลม</p>
+                        <p class="card-text mb-0">67070094 บุญสิตา จงกลม</p>
+                        <p class="card-text text-primary">Project Manager<br>ต่อวงจร และเขียนโค้ด Arduino</p>
                         <a href="https://github.com/CyanKagami" target="_blank" class="btn btn-primary w-100">View GitHub</a>
                     </div>
                 </div>
@@ -357,7 +361,8 @@
                         </a>
                         <div class="card-body">
                         <h3 class="card-title">Office</h3>
-                        <p class="card-text">67070164 วัลชัย กล่ำม่วง</p>
+                        <p class="card-text mb-0">67070164 วัลชัย กล่ำม่วง</p>
+                        <p class="card-text text-primary">ออกแบบวงจร<br>Front-End Developer</p>
                         <a href="https://github.com/GEOFFCHARGE" target="_blank" class="btn btn-primary w-100">View GitHub</a>
                     </div>
                 </div>
@@ -371,7 +376,8 @@
                     </a>
                     <div class="card-body">
                         <h3 class="card-title">Arsé</h3>
-                        <p class="card-text">67070167 วิษณุพงศ์ จันทร์เลี่ยม</p>
+                        <p class="card-text mb-0">67070167 วิษณุพงศ์ จันทร์เลี่ยม</p>
+                        <p class="card-text text-primary">ต่อวงจร และเขียนโค้ด Arduino<br>Back-End Developer</p>
                         <a href="https://github.com/WissanupongChanliem" target="_blank" class="btn btn-primary w-100">View GitHub</a>
                     </div>
                 </div>
@@ -385,7 +391,8 @@
                     </a>
                     <div class="card-body">
                         <h3 class="card-title">Kia</h3>
-                        <p class="card-text">67070179 สมิต สารบรรณ</p>
+                        <p class="card-text mb-0">67070179 สมิต สารบรรณ</p>
+                        <p class="card-text text-primary">Front-End Developer<br>Poster, Slide and Video Editor</p>
                         <a href="https://github.com/67070179Smith" target="_blank" class="btn btn-primary w-100">View GitHub</a>
                     </div>
                 </div>
