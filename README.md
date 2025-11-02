@@ -48,7 +48,7 @@ PomoThink เชื่อมต่อกับ **Firebase Realtime Database** �
 ![](/image/poster/pomothink_poster.png)
 
 ## 🎥 Presentation Video
-[![Pomothink](https://youtu.be/9Ct29JOQauQ)]
+[![Pomothink](/image/pomothink/pomothink_0.png)](https://youtu.be/9Ct29JOQauQ)
 
 ## 🚀 Languages, Framework & Tool
 <img src="https://skillicons.dev/icons?i=arduino,html,css,js,bootstrap,jquery,firebase"/>
