@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>PomoThink</title>
 </head>
-<body style="font-family: 'Prompt';" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body style="font-family: 'Prompt';" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="40">
     <!-- MARK: selection page -->
     <div id="section0" class="container-fluid p-4 d-flex flex-column justify-content-center align-items-center vh-100 text-light text-center position-relative overflow-hidden">
         <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
@@ -55,7 +55,10 @@
                         <a class="nav-link" href="#section3">Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section4">Contributors</a>
+                        <a class="nav-link" href="#section4">Presentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section5">Contributors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#setting">Setting</a>
@@ -97,7 +100,7 @@
     </div>
     <!-- MARK: context -->
     <div id="section1" class="container p-4">
-        <h1 class="text-center">About</h1>
+        <h1 class="text-center">❓ About</h1>
         <hr>
         <div id="slideshow" class="carousel slide shadow" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -139,44 +142,83 @@
         <p>โครงงาน PomoThink สามารถตรวจจับผู้ใช้งานได้จริงด้วย Ultrasonic sensor ช่วยเพิ่มความแม่นยำในการนับเวลา โดยจะไม่นับเวลาหากผู้ใช้งานไม่อยู่หน้าโต๊ะทำงาน มีการเชื่อมต่อกับฐานข้อมูล Firebase ช่วยให้ผู้ใช้งานสามารถติดตามพฤติกรรมของตนเองได้ มี LED บอกสถานะการทำงานของอุปกรณ์และสามารถหยุดพักชั่วคราวหรือเริ่มการนับเวลาใหม่ได้โดยการกดปุ่ม</p>
         <br>
         <h3>Hardware</h3>
-        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #0d6efd;">
-            <div class="card-body">
-                <h6 class="text-primary">Microcontroller</h6>
-                <h4>Arduino Uno R4 WiFi</h4>
+        <p>Click to see image</p>
+        <div id="accordion">
+            <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #0d6efd;">
+                <div class="card-body" data-bs-toggle="collapse" href="#collapse1">
+                    <h6 class="text-primary">Microcontroller</h6>
+                    <h4>Arduino</h4>
+                </div>
+                <div id="collapse1" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-center">
+                        <img src="../image/hardware/arduino.png" class="img-fluid rounded w-100" style="max-width: 50vh;">
+                        <hr>
+                        <h5>Arduino Uno R4 WiFi</h5>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #198754;">
-            <div class="card-body">
-                <h6 class="text-success">Sensor</h6>
-                <h4>Ultrasonic Sensor</h4>
+            <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #198754;">
+                <div class="card-body" data-bs-toggle="collapse" href="#collapse2">
+                    <h6 class="text-success">Sensor</h6>
+                    <h4>Ultrasonic Sensor</h4>
+                </div>
+                <div id="collapse2" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-center">
+                        <img src="../image/hardware/ultrasonic.png" class="img-fluid rounded w-100" style="max-width: 50vh;">
+                        <hr>
+                        <h5>HC-SR04 Ultrasonic Sensor</h5>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #dc3545;">
-            <div class="card-body">
-                <h6 class="text-danger">Input device</h6>
-                <h4>Button</h4>
+            <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #dc3545;">
+                <div class="card-body" data-bs-toggle="collapse" href="#collapse3">
+                    <h6 class="text-danger">Input device</h6>
+                    <h4>Button</h4>
+                </div>
+                <div id="collapse3" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-center">
+                        <img src="../image/hardware/button.png" class="img-fluid rounded w-100" style="max-width: 50vh;">
+                        <hr>
+                        <h5>Push Button Switch</h5>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #ffc107;">
-            <div class="card-body">
-                <h6 class="text-warning">Output device</h6>
-                <h4>Light Emitting Diode (LED)</h4>
+            <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #ffc107;">
+                <div class="card-body" data-bs-toggle="collapse" href="#collapse4">
+                    <h6 class="text-warning">Output device</h6>
+                    <h4>Light Emitting Diode</h4>
+                </div>
+                <div id="collapse4" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-center">
+                        <img src="../image/hardware/rgb.png" class="img-fluid rounded w-100" style="max-width: 50vh;">
+                        <hr>
+                        <h5>RGB LED 5mm</h5>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #ffc107;">
-            <div class="card-body">
-                <h6 class="text-warning">Output device</h6>
-                <h4>Liquid Crystal Display (LCD)</h4>
+            <div class="card mb-3 rounded-3 shadow" style="border-left: 5px solid #ffc107;">
+                <div class="card-body" data-bs-toggle="collapse" href="#collapse5">
+                    <h6 class="text-warning">Output device</h6>
+                    <h4>Liquid Crystal Display</h4>
+                </div>
+                <div id="collapse5" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-center">
+                        <img src="../image/hardware/lcd.png" class="img-fluid rounded w-100" style="max-width: 50vh;">
+                        <hr>
+                        <h5>LCD 16x2 I2C</h5>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
         <h3>Software</h3>
+        <p>Click to see nothing</p>
         <img class="img-fluid mb-4" src="https://skillicons.dev/icons?i=arduino,html,css,js,bootstrap,jquery,firebase">
     </div>
     <hr>
     <!-- MARK: dashboard -->
     <div id="section2" class="container p-4">
-        <h1 class="text-center">Dashboard</h1>
+        <h1 class="text-center">📊 Dashboard</h1>
         <hr>
         <div class="row mb-4">
             <div class="col-12 col-lg-9 mb-4">
@@ -223,7 +265,7 @@
     <hr>
     <!-- MARK: resources -->
     <div id="section3" class="container p-4">
-        <h1 class="text-center">Resources</h1>
+        <h1 class="text-center">🌐 Resources</h1>
         <hr>
         <iframe class="mb-4 shadow" style="overflow-x: auto; overflow-y: scroll; width:100%; height:75vh; border-radius: 5px;" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FWissanupongChanliem%2FPomodoro-Timer-IOT%2Fblob%2Fmain%2Farduino%2Fpomodoro.ino&style=github&type=code&showLineNumbers=on&showFullPath=on"></iframe>
         <br>
@@ -233,7 +275,7 @@
                     <div class="card-body">
                         <h5 class="text-primary">Source Code</h5>
                         <p class="mb-3">GitHub Repository</p>
-                        <a href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank" class="btn btn-primary w-100">View GitHub</a>
+                        <a href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank" class="btn btn-primary w-100">Explore GitHub</a>
                     </div>
                 </div>
             </div>
@@ -249,18 +291,27 @@
             <div class="col-12 col-md-4">
                 <div class="card text-center shadow">
                     <div class="card-body">
-                        <h5 class="text-danger">Presentation</h5>
-                        <p class="mb-3">Youtube</p>
-                        <a href="https://www.youtube.com/watch?v=CSdIJq4S4-Q" target="_blank" class="btn btn-danger w-100">Watch Video</a>
+                        <h5 class="text-danger">Circuit Design</h5>
+                        <p class="mb-3">Tinkercad</p>
+                        <a href="https://www.tinkercad.com/things/80q2PDwYado-pomodoro-iot-design-v1?sharecode=dArc3a_W-uk7-rSiHpFvk-nNUXuz9ISusRRwvf50VaY" target="_blank" class="btn btn-danger w-100">Appreciate Design</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <hr>
-    <!-- MARK: contributors -->
+    <!-- MARK: presentation -->
     <div id="section4" class="container p-4">
-        <h1 class="text-center">Contributors</h1>
+        <h1 class="text-center">📽️ Presentation</h1>
+        <hr>
+        <div class="ratio ratio-16x9 mb-4">
+            <iframe class="rounded-3 shadow" src="https://www.youtube.com/embed/9Ct29JOQauQ" allowfullscreen></iframe>
+        </div>
+    </div>
+    <hr>
+    <!-- MARK: contributors -->
+    <div id="section5" class="container p-4">
+        <h1 class="text-center">🖥️ Contributors</h1>
         <hr>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -289,7 +340,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="card mb-4 shadow">
-                    <a href="https://www.youtube.com/watch?v=h-vRZK-d9gM" target="_blank">
+                    <a href="https://www.youtube.com/watch?v=CSdIJq4S4-Q" target="_blank">
                         <img class="card-img-top" src="../image/member/arse.png">
                     </a>
                     <div class="card-body">
@@ -316,7 +367,7 @@
     <!-- MARK: footer -->
     <div class="container-fluid text-light" style="--bs-bg-opacity: 1; background-color: #3F464C !important;">
         <div class="container p-4 fs-6 fw-light d-flex flex-wrap justify-content-between">
-            <a class="text-light text-decoration-none" href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank">© 2025 PomoThink</a>
+            <a class="text-light text-decoration-none" href="https://github.com/WissanupongChanliem/Pomodoro-Timer-IOT" target="_blank">© 2025 PomoThink 🍅</a>
             <div>
                 Made with 🔥 by
                 <a class="text-light text-decoration-none" href="https://github.com/CyanKagami" target="_blank">@CyanKagami</a> &
