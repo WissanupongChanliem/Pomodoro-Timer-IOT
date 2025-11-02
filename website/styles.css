@@ -4,6 +4,19 @@
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* MARK: zoom in transition */
+.card, .btn
+{
+    transition: all 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+/* MARK: zoom in hover */
+.card:hover, .btn:hover
+{
+    transform: scale(1.02);
+}
+
 /* MARK: page scroll margin */
 #section1, #section2, #section3, #section4
 {
